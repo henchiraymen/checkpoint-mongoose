@@ -1,6 +1,5 @@
 // 1- require express
 const express = require("express");
-const req = require("express/lib/request");
 
 // 2- instance of express
 const app = express();
@@ -16,11 +15,11 @@ const connectDB = require("./config/connectDB");
 connectDB();
 
 // 8- badyparser middleware
-app.use(express.json())
+app.use(express.json());
 
 // 7- require routes
-const router = require('./routes/contact')
-app.use('/api/contacts/',router)
+const router = require("./routes/contact");
+app.use("/api/contacts/", router);
 // 4- create server
 app.listen(port, (error) =>
   error

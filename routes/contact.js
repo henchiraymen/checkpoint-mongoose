@@ -1,6 +1,5 @@
 // require express
 const express = require("express");
-const req = require("express/lib/request");
 
 // require Conatct
 const Contact = require("../model/Contact");
